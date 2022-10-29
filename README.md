@@ -1,2 +1,2 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+# Project to practice array problems in Dart
+you can find the problems and it's solutions in the "bin" folder.
