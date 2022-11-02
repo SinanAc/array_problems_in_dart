@@ -1,8 +1,10 @@
-// ignore_for_file: file_names
+//
+// ======>>  TO FING THE BEST CASE COUNT OF PACKETS BASED ON USER'S NEED
+//
 void main(){
   int smallPack = 2;
   int bigPack = 5;
-  int userNeed = 199;
+  int userNeed = 11;
   int mod = 0;
   if(userNeed<=0||userNeed==1||userNeed==3){
     print('Invalid value');
