@@ -4,9 +4,9 @@
 void main(){
   int smallPack = 2;
   int bigPack = 5;
-  int userNeed = 11;
+  int userNeed = -10;
   int mod = 0;
-  if(userNeed<=0||userNeed==1||userNeed==3){
+  if(userNeed<bigPack && userNeed %smallPack !=0 || userNeed<0){
     print('Invalid value');
     return;
   }
