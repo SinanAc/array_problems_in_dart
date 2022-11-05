@@ -22,6 +22,7 @@ void main() {
   a = a + b;
   b = a.substring(0, a.length - b.length);
   a = a.substring(a.length - b.length, a.length);
-  print(a);
-  print(b);
+  print('Strings after swapping');
+  print('String1 :$a');
+  print('String2 :$b');
 }
