@@ -24,4 +24,13 @@ void main(){
     }
     print('Second largest value in this array is : ${arr[1]}'); 
   
+    // -->> another method to fing the largest value in the array
+    // getting the largest value without using third variable
+    // taking the largest value to the 0th position
+    for(int i=0; i<arr.length; i++) {
+        if(arr[0]<arr[i]){
+          arr[0] = arr[i];
+        }
+    }
+    print('Largest value in this array is : ${arr[0]}'); 
 }
