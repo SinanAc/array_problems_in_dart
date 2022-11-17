@@ -3,7 +3,7 @@
 //
 void main(){
   List<int> array = [23,45,76,89,106,344,789];
-  print(findMedian(array));
+  print(avrage(array));
 }
 
 // -->> to find the median of an array
@@ -14,4 +14,13 @@ int findMedian(List<int> array){
       int a = ((array.length-1)~/2).toInt();
       return ((array[a]+array[a+1])~/2).toInt();
     }
+}
+
+// -->> to find the median of an array
+double avrage(List<int> array){
+    double sum = 0;
+    for(int i=0;i<array.length;i++){
+      sum = sum+array[i];
+    }
+    return sum/array.length;
 }
