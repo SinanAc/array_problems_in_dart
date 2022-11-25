@@ -1,20 +1,19 @@
 //
-// ======>>  PRIME NUMBER PROBLEMS
+// ======>>  IS PRIME OR NOT
 //
 void main() {
-  //List<int> array = [23,45,76,89,106,344,789];
   int value = 359;
-  print(isPrime(value));
+  // -->> to check prime number
+  print(IsPrime._isPrime(value));
 }
 
-// -->> to check prime number
-bool isPrime(int value) {
+class IsPrime {
+  static bool _isPrime(int value) {
   int count = 0;
   for (int i = 1; i <= value; i++) {
-    if (value % i == 0){
+    if (value % i == 0) {
       count++;
-      print(i);
-      if(count==3){
+      if (count == 3) {
         break;
       }
     }
@@ -23,4 +22,5 @@ bool isPrime(int value) {
     return true;
   }
   return false;
+}
 }
