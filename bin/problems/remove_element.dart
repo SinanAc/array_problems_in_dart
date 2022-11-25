@@ -2,9 +2,9 @@
 // ======>>  TO REMOVE ELEMENTS
 //
 void main() {
-  List<int> arr = [1, 2, 3, 4, 5, 6];
+  List<int?> arr = [1, 2, 3, 4, 5, 6];
   // -->> to remove previous to the last element
-  //Remove._removeSecondLast(arr);
+  Remove._removeSecondLast(arr);
   // -->> to remove prime number
   Remove._removePrime(arr);
 }
@@ -14,7 +14,7 @@ class Remove {
     for (int i = 0; i < arr.length; i++) {
       int count = 0;
       if (arr[i] == null) {
-        return;
+        break;
       }
       for (int j = 1; j <= arr[i]!; j++) {
         if (arr[i]!%j == 0) {
@@ -22,19 +22,16 @@ class Remove {
         }
       }
       if (count == 2) {
-        print(arr[i]);
-        // for(int k = i; k < arr.length; k++){
-        //   if (arr[k] == null){return;}
-        //   arr[k] = arr[k+1];
-        // }
+        arr.remove(arr[i]);
+        i--;
       }
     }
-    // print(arr);
+    print(arr);
   }
 
-  // static void _removeSecondLast(List<int?> arr) {
-  //   arr[arr.length - 2] = arr[arr.length - 1];
-  //   arr[arr.length - 1] = null;
-  //   print('Answer : $arr');
-  // }
+  static void _removeSecondLast(List<int?> arr) {
+    arr[arr.length - 2] = arr[arr.length - 1];
+    arr[arr.length - 1] = null;
+    print('Answer : $arr');
+  }
 }
