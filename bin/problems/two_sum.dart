@@ -1,3 +1,6 @@
+//
+// ======>>  TO FIND FIRST TWO VALUES WHICH ARE SUM OF THE TARGET IN ARRAY
+//
 void main() {
   print(Solution.twoSum([2, 4, 6, 7, 1], 11));
 }
