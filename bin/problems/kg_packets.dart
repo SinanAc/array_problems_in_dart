@@ -2,7 +2,7 @@
 // ======>>  TO FING THE BEST CASE COUNT OF 2&5kg PACKETS BASED ON USER'S NEED
 //
 void main() {
-  int userNeed = 11;
+  int userNeed = 15;
   GetPackets.getPacks(userNeed);
 }
 
@@ -16,7 +16,7 @@ class GetPackets {
       return;
     }
     if (userNeed % bigPack == 0) {
-      print('${userNeed / bigPack} packets of $bigPack kg');
+      print('${(userNeed ~/ bigPack).toInt()} packets of $bigPack kg');
       return;
     } else {
       mod = userNeed % bigPack;
