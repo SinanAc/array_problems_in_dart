@@ -1,8 +1,9 @@
 //
-// ======>>  TO MULTIPLY THE ADJUCENT VALUES
+// ======>>  TO MULTIPLY THE ADJUCENTS
 //
 void main() {
   List<int> arr = [1, 2, 3, 4, 5, 6];
+  // --->>> to multiply adjucent values in the array
   Adjacents.multiplyAdjucents(arr);
 }
 
