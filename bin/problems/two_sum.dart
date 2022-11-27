@@ -1,5 +1,5 @@
 //
-// ======>>  TO FIND FIRST TWO VALUES WHICH ARE SUM OF THE TARGET IN ARRAY
+// ======>>  TO FIND FIRST TWO VALUES WHICH'S VALUE WILL BE THE SUM OF THE TARGET IN ARRAY
 //
 void main() {
   print(Solution.twoSum([2, 4, 6, 7, 1], 11));
