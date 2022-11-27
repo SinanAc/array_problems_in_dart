@@ -2,8 +2,8 @@
 // ======>>  TO REVERSE ARRAY & STRING
 //
 void main() {
-  // -->> to reverse an array
   List<int> arr = [1, 2, 3, 4, 5, 6];
+  // -->> to reverse an array
   Reversing.reverseArray(arr);
   // -->> to reverse a string
   String str = 'Hello';
