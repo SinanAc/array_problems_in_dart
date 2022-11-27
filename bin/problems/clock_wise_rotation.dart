@@ -1,8 +1,9 @@
 //
-// ======>>  TO ROTATE THE ARRAY CLOCK WISE
+// ======>>  TO ROTATE THE ARRAYS
 //
 void main() {
   List<String> arr = ['A', 'P', 'P', 'L', 'E'];
+  // --->>> to rotate the array clockwise
   Rotation.rotateArrayInClockWise(arr);
 }
 
