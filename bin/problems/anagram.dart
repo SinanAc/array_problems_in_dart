@@ -1,7 +1,9 @@
 void main() {
   String str1 = 'abcd';
-  String str2 = 'abcc';
-  print(Anagram.checkAnagram(str1, str2));
+  String str2 = 'abce';
+ print(Anagram.checkAnagram(str1, str2));
+// final Map<String,int> trp = {'a':1,'b':2};
+// print('${trp.keys.elementAt(0)}:${trp.values.elementAt(0)}');
 }
 
 class Anagram {
@@ -9,28 +11,35 @@ class Anagram {
     if (str1.length != str2.length) {
       return false;
     }
-    int count1 = 0;
-    int count2 = 0;
+    final Map<String, int> track1 = {};
     for (int i = 0; i < str1.length; i++) {
-      for (int j = 0; j < str1.length; j++) {
-        if (str1[i] == str1[j]) {
-          count1++;
+      if (track1[str1[i]] != null) {
+        track1[str1[i]] = (track1[str1[i]]! + 1);
+      } else {
+        track1[str1[i]] = 1;
+      }
+    }
+    final Map<String, int> track2 = {};
+    for (int i = 0; i < str1.length; i++) {
+      if (track2[str2[i]] != null) {
+        track2[str2[i]] = (track2[str2[i]]! + 1);
+      } else {
+        track2[str2[i]] = 1;
+      }
+    }
+    if (track1.length != track2.length) {
+      return false;
+    }
+    for (int i = 0; i < track1.length; i++) {
+      bool found = false;
+      for (int j = 0; j < track2.length; j++) {
+        if("${track1.keys.elementAt(i)}:${track1.values.elementAt(i)}"=="${track2.keys.elementAt(j)}:${track2.values.elementAt(j)}"){
+          found=true;
         }
       }
-      for (int k = i; k < str2.length; k++) {
-        for (int j = 0; j < str2.length; j++) {
-          if (str2[i] == str2[j]) {
-            count2++;
-          }
-        }
-        if(count1==count2){
-          continue;
-        }else{
-          return false;
-        }
+      if(!found){
+        return false;
       }
-      count1 = 0;
-      count2 = 0;
     }
     return true;
   }
