@@ -3,12 +3,15 @@
 //
 void main() {
   List<String> arr = ['A', 'P', 'P', 'L', 'E'];
-  // --->>> to get frequency of eacg characters in String/List<String>
-  Frequency.getFrequencyOfString(arr);
+  String str = 'APPLE';
+  // --->>> to get frequency of each characters in List<String>
+  Frequency.getFrequencyOfListOfString(arr);
+  // --->>> to get frequency of each characters in String
+  Frequency.getFrequencyOfString(str);
 }
 
 class Frequency {
-  static void getFrequencyOfString(List<String> arr) {
+  static void getFrequencyOfListOfString(List<String> arr) {
     List<int> temp = List.generate(arr.length, (index) => -1);
     for (int i = 0; i < arr.length; i++) {
       int count = 0;
@@ -24,5 +27,17 @@ class Frequency {
         print(arr[i] + count.toString());
       }
     }
+  }
+
+  static void getFrequencyOfString(String str) {
+    final Map<String, int> track = {};
+    for (int i = 0; i < str.length; i++) {
+      if (track[str[i]] != null) {
+        track[str[i]] = (track[str[i]]! + 1);
+      } else {
+        track[str[i]] = 1;
+      }
+    }
+    print(track);
   }
 }
