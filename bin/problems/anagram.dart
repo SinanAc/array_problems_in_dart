@@ -1,46 +1,30 @@
 void main() {
-  String str1 = 'abcd';
-  String str2 = 'abce';
- print(Anagram.checkAnagram(str1, str2));
-// final Map<String,int> trp = {'a':1,'b':2};
-// print('${trp.keys.elementAt(0)}:${trp.values.elementAt(0)}');
+  AnagramString.isAnagram("Keep", "peeK");
+  //AnagramString.isAnagram("Mother In Law", "Hitler Woman");
 }
 
-class Anagram {
-  static bool checkAnagram(String str1, String str2) {
-    if (str1.length != str2.length) {
-      return false;
-    }
-    final Map<String, int> track1 = {};
-    for (int i = 0; i < str1.length; i++) {
-      if (track1[str1[i]] != null) {
-        track1[str1[i]] = (track1[str1[i]]! + 1);
-      } else {
-        track1[str1[i]] = 1;
+class AnagramString {
+  static void isAnagram(String str1, String str2) {
+    String s1 = str1.replaceAll("\\s", "");
+    String s2 = str2.replaceAll("\\s", "");
+    bool status = true;
+    if (s1.length != s2.length) {
+      status = false;
+    } else {
+      final List<String> arrayS1 = [];
+      final List<String> arrayS2 = [];
+      for (int i = 0; i < s1.length; i++) {
+        arrayS1.add(s1[i]);
+        arrayS2.add(s2[i]);
       }
+      arrayS1.sort();
+      arrayS2.sort();
+      status = arrayS1 == arrayS2;
     }
-    final Map<String, int> track2 = {};
-    for (int i = 0; i < str1.length; i++) {
-      if (track2[str2[i]] != null) {
-        track2[str2[i]] = (track2[str2[i]]! + 1);
-      } else {
-        track2[str2[i]] = 1;
-      }
+    if (status) {
+      print("$s1 and $s2 are anagrams");
+    } else {
+      print("$s1 and $s2 are not anagrams");
     }
-    if (track1.length != track2.length) {
-      return false;
-    }
-    for (int i = 0; i < track1.length; i++) {
-      bool found = false;
-      for (int j = 0; j < track2.length; j++) {
-        if("${track1.keys.elementAt(i)}:${track1.values.elementAt(i)}"=="${track2.keys.elementAt(j)}:${track2.values.elementAt(j)}"){
-          found=true;
-        }
-      }
-      if(!found){
-        return false;
-      }
-    }
-    return true;
   }
 }
