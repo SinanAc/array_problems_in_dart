@@ -3,13 +3,13 @@
 //
 void main() {
   List<int> arr = [1, 2, 31, 3, 34, 4, 5, 6, 189];
-  // -->> to fing the largest value in the array
+  // -->> to find the largest value in the array
   LargestValue.getLargetValue(arr);
-  // -->> to fing the second largest value in the array
+  // -->> to find the second largest value in the array
   LargestValue.getSecondLarget(arr);
-  // -->> to fing the peak value who's neighbors are not smaller than them
+  // -->> to find the peak value which is larger than neighbours
   LargestValue.getPeakValueThatsLargerThanNeighbours(arr);
-  // -->> another method to fing the largest value in the array
+  // -->> another method to find the largest value in the array
   // getting the largest value without using third variable
   // taking the largest value to the 0th position
   LargestValue.getLargestByTakingToZeroth(arr);
@@ -49,7 +49,7 @@ class LargestValue {
         }
       }
     }
-    print('Second largest value in this array is : ${arr[1]}');
+    print('The peak value which is larger than neighbours is : ${arr[1]}');
   }
 
   static void getLargestByTakingToZeroth(List<int> arr) {
