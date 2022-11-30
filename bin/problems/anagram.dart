@@ -1,25 +1,25 @@
 void main() {
-  AnagramString.isAnagram("Keep", "peeK");
-  //AnagramString.isAnagram("Mother In Law", "Hitler Woman");
+  AnagramString.isAnagram('abc', 'acb');
+  AnagramString.isAnagram("Lawyer", "erylav");
 }
 
 class AnagramString {
   static void isAnagram(String str1, String str2) {
-    String s1 = str1.replaceAll("\\s", "");
-    String s2 = str2.replaceAll("\\s", "");
+    String s1 = str1.toLowerCase();
+    String s2 = str2.toLowerCase();
     bool status = true;
     if (s1.length != s2.length) {
       status = false;
+    } else if (s1 == s2) {
+      status = true;
     } else {
-      final List<String> arrayS1 = [];
-      final List<String> arrayS2 = [];
-      for (int i = 0; i < s1.length; i++) {
-        arrayS1.add(s1[i]);
-        arrayS2.add(s2[i]);
-      }
+      final List<String> arrayS1 = s1.split('');
+      final List<String> arrayS2 = s2.split('');
       arrayS1.sort();
       arrayS2.sort();
-      status = arrayS1 == arrayS2;
+      String a = arrayS1.join();
+      String b = arrayS2.join();
+      status = a == b;
     }
     if (status) {
       print("$s1 and $s2 are anagrams");
