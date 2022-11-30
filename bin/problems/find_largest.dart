@@ -7,6 +7,8 @@ void main() {
   LargestValue.getLargetValue(arr);
   // -->> to fing the second largest value in the array
   LargestValue.getSecondLarget(arr);
+  // -->> to fing the peak value who's neighbors are not smaller than them
+  LargestValue.getPeakValueThatsLargerThanNeighbours(arr);
   // -->> another method to fing the largest value in the array
   // getting the largest value without using third variable
   // taking the largest value to the 0th position
@@ -25,6 +27,19 @@ class LargestValue {
   }
 
   static void getSecondLarget(List<int> arr) {
+    for (int i = 0; i < arr.length - 1; i++) {
+      for (int j = i + 1; j < arr.length; j++) {
+        if (arr[i] < arr[j]) {
+          int temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+      }
+    }
+    print('Second largest value in this array is : ${arr[1]}');
+  }
+
+    static void getPeakValueThatsLargerThanNeighbours(List<int> arr) {
     for (int i = 0; i < arr.length - 1; i++) {
       for (int j = i + 1; j < arr.length; j++) {
         if (arr[i] < arr[j]) {
