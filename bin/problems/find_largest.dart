@@ -15,12 +15,6 @@ void main() {
   LargestValue.getPeakValueWhichIsLargerThanNeighbours(arr);
   // ======================================================
 
-  // -->> another method to find the largest value in the array
-  // getting the largest value without using third variable
-  // taking the largest value to the 0th position
-  LargestValue.getLargestByTakingToZeroth(arr);
-  // ======================================================
-
   // Given an array A of positive integers.
   List<int> a = [16, 17, 4, 3, 5, 2];
   // The task is to find the leaders in the array.
