@@ -2,7 +2,7 @@
 // ======>>  TO FIND THE LARGEST VALUES
 //
 void main() {
-  List<int> arr = [1, 2, 31, 3, 34, 4, 5, 6, 189];
+  List<int> arr = [1, 2, 3, 5, 24, 8, 4, 3, 4];
   // -->> to find the largest value in the array
   LargestValue.getLargetValue(arr);
   // -->> to find the second largest value in the array
@@ -40,19 +40,23 @@ class LargestValue {
   }
 
   static void getPeakValueWhichIsLargerThanNeighbours(List<int> arr) {
-    int largest = arr[0];
-    print(largest);
     if (arr[0] > arr[1]) {
       print('The peak value which is larger than neighbours is : ${arr[0]}');
       return;
     }
-    for (int i = 1; i < arr.length-1; i++) {
-      if(arr[i]>arr[i-1]&&arr[i] > arr[i+1]){
+    for (int i = 1; i < arr.length - 1; i++) {
+      if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
         print('The peak value which is larger than neighbours is : ${arr[i]}');
         return;
       }
     }
-    print('The peak value which is larger than neighbours is : ${arr[1]}');
+    if (arr[arr.length - 1] > arr[arr.length - 2]) {
+      print(
+        'The peak value which is larger than neighbours is : ${arr[arr.length - 1]}',
+      );
+      return;
+    }
+    print('No valid peak value!!');
   }
 
   static void getLargestByTakingToZeroth(List<int> arr) {
