@@ -8,7 +8,7 @@ void main() {
   // -->> to find the second largest value in the array
   LargestValue.getSecondLarget(arr);
   // -->> to find the peak value which is larger than neighbours
-  LargestValue.getPeakValueThatsLargerThanNeighbours(arr);
+  LargestValue.getPeakValueWhichIsLargerThanNeighbours(arr);
   // -->> another method to find the largest value in the array
   // getting the largest value without using third variable
   // taking the largest value to the 0th position
@@ -39,14 +39,17 @@ class LargestValue {
     print('Second largest value in this array is : ${arr[1]}');
   }
 
-    static void getPeakValueThatsLargerThanNeighbours(List<int> arr) {
-    for (int i = 0; i < arr.length - 1; i++) {
-      for (int j = i + 1; j < arr.length; j++) {
-        if (arr[i] < arr[j]) {
-          int temp = arr[i];
-          arr[i] = arr[j];
-          arr[j] = temp;
-        }
+  static void getPeakValueWhichIsLargerThanNeighbours(List<int> arr) {
+    int largest = arr[0];
+    print(largest);
+    if (arr[0] > arr[1]) {
+      print('The peak value which is larger than neighbours is : ${arr[0]}');
+      return;
+    }
+    for (int i = 1; i < arr.length-1; i++) {
+      if(arr[i]>arr[i-1]&&arr[i] > arr[i+1]){
+        print('The peak value which is larger than neighbours is : ${arr[i]}');
+        return;
       }
     }
     print('The peak value which is larger than neighbours is : ${arr[1]}');
