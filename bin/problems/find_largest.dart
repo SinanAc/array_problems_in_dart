@@ -32,7 +32,7 @@ class LargestValue {
         largest = arr[i];
       }
     }
-    print('Largest value in this array is: $largest');
+    print('Largest value is: $largest');
   }
 
   static void getSecondLarget(List<int> arr) {
@@ -45,7 +45,7 @@ class LargestValue {
         }
       }
     }
-    print('Second largest value in this array is: ${arr[1]}');
+    print('Second largest value is: ${arr[1]}');
   }
 
   static void getPeakValueWhichIsLargerThanNeighbours(List<int> arr) {
@@ -92,6 +92,6 @@ class LargestValue {
         arr[0] = arr[i];
       }
     }
-    print('Largest value in this array is: ${arr[0]}');
+    print('Largest value is: ${arr[0]}');
   }
 }

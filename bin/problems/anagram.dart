@@ -1,6 +1,6 @@
 void main() {
   AnagramString.isAnagram('abc', 'acb');
-  AnagramString.isAnagram("Lawyer", "erylav");
+  AnagramString.isAnagram("Lawyers", "erylawz");
 }
 
 class AnagramString {

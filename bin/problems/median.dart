@@ -5,7 +5,7 @@ void main() {
   List<int> array = [23, 45, 76, 89, 106, 344, 789];
   // -->> to find the median of an array
   print(MedianAndAverage.findMedian(array));
-  // -->> to find average
+  // -->> to find the average of an array
   print(MedianAndAverage.avrage(array));
 }
 
