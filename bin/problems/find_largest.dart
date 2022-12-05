@@ -1,5 +1,5 @@
 //
-// ======>>  TO FIND THE LARGEST VALUES
+// ======>> TO FIND THE LARGEST VALUES
 //
 void main() {
   List<int> arr = [1, 2, 3, 5, 24, 8, 4, 3, 4];
