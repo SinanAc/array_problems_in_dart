@@ -1,5 +1,5 @@
 //
-// ======>>  IS PRIME OR NOT
+// ======>> IS PRIME OR NOT
 //
 void main() {
   int value = 359;
