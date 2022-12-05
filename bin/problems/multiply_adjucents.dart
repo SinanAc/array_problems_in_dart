@@ -13,6 +13,6 @@ class Adjacents {
     for (int i = 0; i < arr.length - 1; i++) {
       results.add(arr[i] * arr[i + 1]);
     }
-    print('Answer : $results');
+    print('Answer: $results');
   }
 }
