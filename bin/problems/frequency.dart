@@ -1,5 +1,5 @@
 //
-// ======>>  TO FIND THE FREQUENCY OF EACH ELEMENT
+// ======>> TO FIND THE FREQUENCY OF EACH ELEMENT
 //
 void main() {
   List<String> arr = ['A', 'P', 'P', 'L', 'E'];
