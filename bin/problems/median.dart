@@ -1,5 +1,5 @@
 //
-// ======>>  TO FIND MEDIAN & AVERAGE
+// ======>> TO FIND MEDIAN & AVERAGE
 //
 void main() {
   List<int> array = [23, 45, 76, 89, 106, 344, 789];
