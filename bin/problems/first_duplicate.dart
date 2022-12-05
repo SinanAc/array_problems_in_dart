@@ -1,5 +1,5 @@
 //
-// ======>>  TO FIND THE DUPLICATE ELEMENT
+// ======>> TO FIND THE DUPLICATE ELEMENT
 //
 void main() {
   List<int> arr = [1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1];
