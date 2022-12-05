@@ -1,5 +1,5 @@
 //
-// ======>>  TO FING THE BEST CASE COUNT OF 2&5kg PACKETS BASED ON USER'S NEED
+// ======>> TO FING THE BEST CASE COUNT OF 2&5kg PACKETS BASED ON USER'S NEED
 //
 void main() {
   int userNeed = 15;
