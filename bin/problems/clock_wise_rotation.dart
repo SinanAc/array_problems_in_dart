@@ -1,5 +1,5 @@
 //
-// ======>>  TO ROTATE THE ARRAYS
+// ======>> TO ROTATE THE ARRAYS
 //
 void main() {
   List<String> arr = ['A', 'P', 'P', 'L', 'E'];
