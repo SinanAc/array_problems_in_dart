@@ -1,5 +1,5 @@
 //
-// ======>>  TO MULTIPLY THE ADJUCENTS
+// ======>> TO MULTIPLY THE ADJUCENTS
 //
 void main() {
   List<int> arr = [1, 2, 3, 4, 5, 6];
