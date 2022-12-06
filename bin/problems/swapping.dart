@@ -1,5 +1,5 @@
 //
-// ======>>  TO SWAP TWO ARRAYS
+// ======>> TO SWAP TWO ARRAYS
 //
 void main() {
   List<int> array1 = [10, 20, 30, 40, 50];
