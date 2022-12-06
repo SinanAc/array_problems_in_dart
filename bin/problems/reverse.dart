@@ -1,5 +1,5 @@
 //
-// ======>>  TO REVERSE ARRAY & STRING
+// ======>> TO REVERSE ARRAY & STRING
 //
 void main() {
   List<int> arr = [1, 2, 3, 4, 5, 6];
